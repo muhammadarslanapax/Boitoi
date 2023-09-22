@@ -1,4 +1,5 @@
 import 'package:boitoi/utlils/colors.dart';
+import 'package:boitoi/widgets/cText.dart';
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
@@ -12,6 +13,7 @@ class cButton2 extends StatelessWidget {
   final FontWeight? fontWeight;
   final double? textsize;
   final double? borderradius;
+  final String? image;
 
   const cButton2(
       {super.key,
@@ -23,7 +25,8 @@ class cButton2 extends StatelessWidget {
       this.txtcolor,
       this.fontWeight,
       this.textsize,
-      this.borderradius});
+      this.borderradius,
+      this.image});
 
   @override
   Widget build(BuildContext context) {
@@ -31,10 +34,8 @@ class cButton2 extends StatelessWidget {
     final height1 = MediaQuery.of(context).size.height;
 
     return InkWell(
-      onTap: onTap ,
-     
+      onTap: onTap,
       splashColor: Colors.red,
-  
       child: Container(
         decoration: BoxDecoration(
             // boxShadow: [
@@ -44,18 +45,33 @@ class cButton2 extends StatelessWidget {
             //       spreadRadius: 5,
             //       color: Colors.grey.withOpacity(0.5))
             // ],
-            borderRadius: BorderRadius.circular(borderradius ?? 6),
+            borderRadius: BorderRadius.circular(borderradius ?? 8),
             color: bgcolor ?? yellow),
         width: width ?? width1,
-        height: height ?? height1 * 0.053,
-        child: Center(
-          child: Text(
-            text,
-            style: TextStyle(
-                color: txtcolor ?? white,
-                fontWeight: fontWeight ?? FontWeight.w400,
-                fontSize: textsize ?? width1 * 0.038),
-          ),
+        height: height ?? height1 * 0.06,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            image != null
+                ? Container(
+                    width: width1 * 0.055,
+                    decoration: BoxDecoration(
+                      image:
+                          DecorationImage(image: AssetImage(image.toString())),
+                    ),
+                  )
+                : const cText(text: ""),
+            SizedBox(
+              width: width1 * 0.02,
+            ),
+            Text(
+              text,
+              style: TextStyle(
+                  color: txtcolor ?? white,
+                  fontWeight: fontWeight ?? FontWeight.w600,
+                  fontSize: textsize ?? width1 * 0.038),
+            ),
+          ],
         ),
       ),
     );

@@ -24,6 +24,8 @@ const Color golden = Color(0xFFFBBC05);
 const Color blue = Color(0xFF0060F7);
 const Color darkblue = Color(0xFF264962);
 const Color lightRed = Color(0xFFEB4335);
+const Color fbBlue = Color(0xFF345287);
+const Color googleRed = Color(0xFFE85C4A);
 
 
 

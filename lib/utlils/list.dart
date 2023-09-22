@@ -1,7 +1,7 @@
 
-import 'package:boitoi/views/dashboard/bottomPages/bookScreen.dart';
+import 'package:boitoi/views/dashboard/bottomPages/book/bookScreen.dart';
 import 'package:boitoi/views/dashboard/bottomPages/homepage/homeScreen.dart';
-import 'package:boitoi/views/dashboard/bottomPages/latesBookScreen.dart';
+import 'package:boitoi/views/dashboard/bottomPages/book/latesBookScreen.dart';
 import 'package:boitoi/views/dashboard/bottomPages/profileScreen.dart';
 import 'package:boitoi/views/dashboard/bottomPages/sellBook.dart';
 import 'package:boitoi/views/dashboard/bottomPages/homepage/tabs/tabfiveScreen.dart';
