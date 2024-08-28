@@ -1,7 +1,7 @@
 import 'package:boitoi/controller/taboneController.dart';
 import 'package:boitoi/utlils/colors.dart';
 import 'package:boitoi/widgets/cText.dart';
-import 'package:carousel_slider/carousel_slider.dart';
+// import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
@@ -35,28 +35,28 @@ class _TabOneScreenState extends State<TabOneScreen> {
           child: Container(
             width: width,
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 14),
-                child: CarouselSlider(
-                  items: imageUrls.map((url) {
-                    return Container(
-                        width: width,
-                        height: height * 0.2,
-                        child: ClipRRect(borderRadius: BorderRadius.circular(8), child: Image.asset(url, fit: BoxFit.cover)));
-                  }).toList(),
-                  options: CarouselOptions(
-                    height: height * 0.2,
-                    autoPlay: true,
-                    enlargeCenterPage: true,
-                    viewportFraction: 1.0,
-                    aspectRatio: 16 / 3,
-                    onPageChanged: (index, reason) {
-                      obj.changeindex(index);
-                      obj.update();
-                    },
-                  ),
-                ),
-              ),
+              // Padding(
+              //   padding: const EdgeInsets.symmetric(horizontal: 14),
+              //   child: CarouselSlider(
+              //     items: imageUrls.map((url) {
+              //       return Container(
+              //           width: width,
+              //           height: height * 0.2,
+              //           child: ClipRRect(borderRadius: BorderRadius.circular(8), child: Image.asset(url, fit: BoxFit.cover)));
+              //     }).toList(),
+              //     options: CarouselOptions(
+              //       height: height * 0.2,
+              //       autoPlay: true,
+              //       enlargeCenterPage: true,
+              //       viewportFraction: 1.0,
+              //       aspectRatio: 16 / 3,
+              //       onPageChanged: (index, reason) {
+              //         obj.changeindex(index);
+              //         obj.update();
+              //       },
+              //     ),
+              //   ),
+              // ),
 
               SizedBox(height: height * 0.008), // Add spacing between carousel and indicators
               Row(

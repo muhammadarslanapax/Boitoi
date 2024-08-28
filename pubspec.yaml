@@ -39,16 +39,12 @@ dependencies:
   shared_preferences: 
   image_picker: 
   path_provider: 
-  firebase_auth: 
-  firebase_core: 
-  firebase_storage: 
-  cloud_firestore: 
   flutter_spinkit: 
   fluttertoast:
   cached_network_image:
   google_fonts: ^6.0.0
   audioplayers: ^5.1.0
-  carousel_slider: ^4.2.1
+  # carousel_slider: 
   flutter_rating_bar: ^4.0.1
   expandable: ^5.0.1
 
